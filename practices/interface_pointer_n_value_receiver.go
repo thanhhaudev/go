@@ -5,6 +5,13 @@ package main
 Because interfaces are wrappers around concrete types, they are reference types.
 No need to use pointers to interfaces to change the underlying value.
 
+- In Go, a concrete type is a type that has a specific implementation, as opposed to an interface type,
+which defines a set of methods but does not provide the implementation. Concrete types can be structs, basic types (like int, string, etc.),
+or any other type that is not an interface.
+
+- Concrete types are used to create instances and provide the actual implementation of methods defined by interfaces.
+For example, in the context of the Animal interface, Dog and Cat are concrete types that implement the Speak method.
+
 - The value receiver is used when you want to copy the value of the receiver.
 - The pointer receiver is used when you want to copy the reference of the receiver or when you want to change data in the receiver.
 */
