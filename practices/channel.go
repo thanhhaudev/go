@@ -28,20 +28,23 @@ func main() {
 	fmt.Println(msg)
 
 	// this is buffered channel
-	// if we don't specify the buffer size (10), the channel will be unbuffered and block until the receiver is ready to receive the value
-	numChan := make(chan []int, 10)
-	var numbers []int
-	for i := 0; i < 10; i++ {
-		go func() {
-			numbers = append(numbers, i) // append the value of i to the slice
-			fmt.Printf("Sending %d to the channel...\n", i)
-		}()
-	}
+	// if we don't specify the buffer size (2), the channel will be unbuffered and block until the receiver is ready to receive the value
+	numChan := make(chan []int, 2)
+
+	go func() {
+		numChan <- []int{1, 2, 3, 4, 5} // send a slice of integers to the channel
+		fmt.Println("Sent first slice of integers to the channel.")
+	}()
+
+	go func() {
+		numChan <- []int{6, 7, 8, 9, 10} // send another slice of integers to the channel
+		fmt.Println("Sent second slice of integers to the channel.")
+	}()
 
 	time.Sleep(1 * time.Second) // wait for the goroutines to finish
 
-	numChan <- numbers // send the slice of integers to the channel
-	nums := <-numChan  // receive slice of integers from the channel
-
-	fmt.Println(nums)
+	close(numChan) // close the channel after sending the values
+	for num := range numChan {
+		fmt.Printf("Received slice of integers: %v\n", num)
+	}
 }
