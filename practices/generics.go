@@ -16,6 +16,11 @@ func Print[T any](s T) {
 	fmt.Printf("%T\n", s)
 }
 
+// Swap this function can accept two different types
+func Swap[T1, T2 any](a T1, b T2) (T2, T1) {
+	return b, a
+}
+
 // Box this is a generic type
 type Box[T any] struct {
 	value T
@@ -41,4 +46,8 @@ func main() {
 
 	boxString := Box[string]{value: "hello"}
 	fmt.Printf("%T %v\n", boxString.GetValue(), boxString.GetValue()) // string hello
+
+	// multiple type parameters
+	a, b := Swap(1, "hello")
+	fmt.Println(a, b) // hello 1
 }
