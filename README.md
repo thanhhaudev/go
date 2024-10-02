@@ -34,3 +34,8 @@
 ### Panic and Recover
 - [Panic and Recover](practices/panic_n_recover.go)
 - [Panic and Recover Inside Goroutine](practices/panic_n_recover_goroutines.go)
+
+## Contributing
+If you want to contribute to this repository, you can fork this repository and create a pull request. I will review your pull request as soon as possible.
+
+I'm self-taught, so if you find any mistakes in my code, please let me know. I will be very grateful for your help.
