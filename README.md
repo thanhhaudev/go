@@ -8,11 +8,12 @@
 - [Using Slices with append()](practices/slices_append.go)
 - [How capacity works in Slices](practices/slices_append_capacity.go)
 
-### Interfaces
+### Interfaces/Structs
 - [Pointer and Value Receivers](practices/interface_pointer_n_value_receiver.go)
 
 ### Channels
-- [Channels](practices/channel.go)
+- [Channel](practices/channel.go)
+- [Channel Directions](practices/channel_directions.go)
 - [Channel Deadlock](practices/channel_deadlock.go)
 
 ### Context
