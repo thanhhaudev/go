@@ -14,6 +14,7 @@
 ### Channels
 - [Channel](practices/channel.go)
 - [Channel Directions](practices/channel_directions.go)
+- [Channel Select](practices/channel_select.go)
 - [Channel Deadlock](practices/channel_deadlock.go)
 
 ### Context
