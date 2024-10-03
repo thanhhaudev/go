@@ -1,4 +1,18 @@
+# Go Practice Repository
+
 📝 I'm using this repository to master the Go programming language. If you want to practice with me, you can clone this repository and follow the practices.
+
+## Table of Contents
+
+- [Arrays](#arrays)
+- [Slices](#slices)
+- [Interfaces/Structs](#interfacesstructs)
+- [Channels](#channels)
+- [Context](#context)
+- [Generics](#generics)
+- [Panic and Recover](#panic-and-recover)
+- [Contributing](#contributing)
+
 
 ### Arrays
 - [Arrays](practices/arrays.go)
