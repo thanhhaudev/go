@@ -19,7 +19,8 @@
 
 ### Slices
 - [Slices](practices/slices.go)
-- [Using Slices with append()](practices/slices_append.go)
+- [append() function](practices/slices_append.go)
+- [make() function](practices/slices_make.go)
 - [How capacity works in Slices](practices/slices_append_capacity.go)
 
 ### Interfaces/Structs
