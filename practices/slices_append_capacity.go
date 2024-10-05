@@ -31,4 +31,10 @@ func main() {
 	fmt.Println(x, len(x), cap(x)) // [1 2 3 4 5 6 7 8] 8 8
 	x = append(x, 9)
 	fmt.Println(x, len(x), cap(x)) // [1 2 3 4 5 6 7 8 9] 9 16
+
+	/*
+		The primary goal is to minimize the number of times the slice needs to be grown. This is because growing a slice requires allocating a new array and copying the elements from the old array to the new array.
+		- If we know the maximum number of elements the slice will hold, we can use the built-in `make` function to create a slice with a specified length and capacity.
+		- If we do not provide the capacity when using the make function to create a slice, the capacity will be equal to the length.
+	*/
 }

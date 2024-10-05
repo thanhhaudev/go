@@ -38,4 +38,9 @@ func main() {
 	// the only thing we can compare is nil
 	fmt.Println(d == nil) // true
 	// we can use reflect.DeepEqual to compare two slices
+
+	// Different ways to create a slice
+	// var data []int // this creates a nil slice (no memory is allocated)
+	// data := []int{} // this creates an empty slice, and it is not nil (it has allocated memory, false when compared with nil)
+	// data := make([]int, 0) // this creates an empty slice, and it is not nil (it has allocated memory)
 }
