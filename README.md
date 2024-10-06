@@ -22,6 +22,7 @@
 - [append() function](practices/slices_append.go)
 - [make() function](practices/slices_make.go)
 - [How capacity works in Slices](practices/slices_append_capacity.go)
+- [Slice expression](practices/slices_slice_expression.go)
 
 ### Interfaces/Structs
 - [Pointer and Value Receivers](practices/interface_pointer_n_value_receiver.go)
