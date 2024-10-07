@@ -1,4 +1,4 @@
-# Go Practice Repository
+# Go Practice Repository 🌱
 
 📝 I'm using this repository to master the Go programming language. If you want to practice with me, you can clone this repository and follow the practices.
 
@@ -11,6 +11,7 @@
 - [Context](#context)
 - [Generics](#generics)
 - [Panic and Recover](#panic-and-recover)
+- [Design Patterns](#design-patterns)
 - [Contributing](#contributing)
 
 
@@ -54,7 +55,10 @@
 - [Panic and Recover](practices/panic_n_recover.go)
 - [Panic and Recover Inside Goroutine](practices/panic_n_recover_goroutines.go)
 
-## Contributing
+### Design Patterns
+- [Worker](design_patterns/worker/worker.go)
+
+## Contributing 🤝
 If you want to contribute to this repository, you can fork this repository and create a pull request. I will review your pull request as soon as possible.
 
 I'm self-taught, so if you find any mistakes in my code, please let me know. I will be very grateful for your help.
