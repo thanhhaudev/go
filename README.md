@@ -29,9 +29,10 @@
 
 ### Channels
 - [Channel](practices/channel.go)
-- [Channel Directions](practices/channel_directions.go)
-- [Channel Select](practices/channel_select.go)
-- [Channel Deadlock](practices/channel_deadlock.go)
+- [Directions](practices/channel_directions.go)
+- [select() function](practices/channel_select.go)
+- [Deadlock](practices/channel_deadlock.go)
+- [Worker Pool](practices/channel_worker_pool.go)
 
 ### Context
 - [Context](practices/context.go)
