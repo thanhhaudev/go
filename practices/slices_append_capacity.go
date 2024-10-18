@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 /*
-- Every slice has a capacity, which is the maximum number of elements the slice can hold without allocating more memory. This can be larger than the length of the slice.
+- Every slice has a capacity, which is the maximum number of elements the slice can hold without allocating more memory (consecutive memory locations reserved). This can be larger than the length of the slice.
 - When we append elements to a slice, one or more values is added to the end of the slice.
 - If the slice has enough capacity to hold the new elements, the elements are added to the slice in place.
 - If we try to add more elements when the length equals (or exceeds) the capacity, a new underlying array is created with double the capacity, the elements from the original array are copied to the new array, and the new elements are added to end, and the slice header is updated to point to the new array.
