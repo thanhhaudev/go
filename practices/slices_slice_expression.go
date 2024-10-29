@@ -105,4 +105,12 @@ func main() {
 	// After appending items to y and z, they will have different addresses because when the new length exceeds the capacity,
 	// a new underlying array is created and the elements are copied to the new array.
 	// So the new slice will have its own underlying array and will not affect the original slice.
+
+	// converting Arrays to Slices
+	// if we have an array, and we want to convert it to a slice, we can use the slice expression with the full slice expression
+	// this also creates a new slice with its own underlying array
+
+	arr := [5]int{1, 2, 3, 4, 5}
+	slice := arr[:3:3]                             // slice is [1 2 3] with a capacity of 3 (3-0)
+	fmt.Printf("arr: %v, slice: %v\n", arr, slice) // arr: [1 2 3 4 5], slice: [1 2 3]
 }
