@@ -2,18 +2,8 @@
 
 📝 I'm using this repository to master the Go programming language. If you want to practice with me, you can clone this repository and follow the practices.
 
-## Table of Contents
-
-- [Arrays](#arrays)
-- [Slices](#slices)
-- [Interfaces/Structs](#interfacesstructs)
-- [Channels](#channels)
-- [Context](#context)
-- [Generics](#generics)
-- [Panic and Recover](#panic-and-recover)
-- [Design Patterns](#design-patterns)
-- [Contributing](#contributing)
-
+### Strings
+- [Strings](practices/strings.go)
 
 ### Arrays
 - [Arrays](practices/arrays.go)
@@ -24,6 +14,7 @@
 - [make() function](practices/slices_make.go)
 - [How capacity works in Slices](practices/slices_append_capacity.go)
 - [Slice expression](practices/slices_slice_expression.go)
+- [copy() function](practices/slices_copy.go)
 
 ### Interfaces/Structs
 - [Pointer and Value Receivers](practices/interface_pointer_n_value_receiver.go)
@@ -35,7 +26,7 @@
 - [Deadlock](practices/channel_deadlock.go)
 - [Worker Pool](practices/channel_worker_pool.go)
 
-### Context
+### Contexts
 - [Context](practices/context.go)
 - [Context with Value](practices/context_with_value.go)
 - [Context with Cancel](practices/context_with_cancel.go)
