@@ -10,7 +10,7 @@ Here is a visual representation of a slice header:
 +---------+---------+---------+
 
 + Changes to the slice header in the function are not reflected in the original slice. The original slice is not modified.
-+ Changes to the underlying array in the function are reflected in the original slice. The original slice is modified. e.g. append function or modifying the elements of the slice directly.
++ Changes to the underlying array in the function are reflected in the original slice. The original slice is modified. e.g. append elements to the slice when the slice has enough capacity or modify the elements in the slice directly.
 
 How append works:
 + If the slice has enough capacity, append will add the new elements to the slice and return the original slice.
@@ -27,8 +27,10 @@ func main() {
 	x = append(x, y...) // append a slice to the slice using the variadic parameter syntax
 
 	/*
-		It's compile-time error:
+		It’s a compile-time error:
 		+ if we use the variadic parameter syntax to append a slice to a slice of a different type, for example: x = append(x, []string{"a", "b"}...)
+
+		Logical issue (not a compile-time error):
 		+ if we forget to assign the value returned by the append function to the slice, for example: append(x, 1)
 		+ The function adds elements to the slice, but the slice header is a copy, so the original slice is not modified. If we want to modify the original slice, we need to set the returned slice back to the variable that holds the original slice.
 	*/
