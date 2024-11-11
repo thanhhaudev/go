@@ -33,7 +33,7 @@ type Worker struct {
 func (w *Worker) Start() {
 	go func() {
 		for { // the for {} loop ensures that the worker keeps running
-			// Add the worker to the worker pool when idle
+			// Add the worker to the worker pool when idle, signaling that the worker is available to take on a job
 			w.WorkPool <- w.Queues
 
 			select {
