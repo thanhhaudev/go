@@ -4,6 +4,12 @@ package main
 Dynamic Worker Assignment: With chan chan Job, each worker can dynamically register itself to the workPool and wait for jobs. This allows the dispatcher to assign jobs to available workers dynamically.
 Load Balancing: It helps in better load balancing. The dispatcher can pick any available worker from the pool and assign a job, ensuring that no worker is overloaded while others are idle.
 Worker Reusability: Workers can be reused efficiently. Once a worker completes a job, it can re-register itself to the workPool and wait for the next job.
+
+The blocking occurs at different points:
+w.WorkPool <- w.Queues will block if the WorkPool channel is full.
+jobQueue := <-d.WorkPool will block until an available worker's job queue is received.
+jobQueue <- job will block until the job is received by the worker's job queue.
+job := <-w.Queues will block until a job is sent to the worker's job queue.
 */
 
 import (
