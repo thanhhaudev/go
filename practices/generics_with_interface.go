@@ -44,6 +44,7 @@ func main() {
 
 	intItem := &IntItem{}
 	intItem.Set(10)
+	PrintItem(intItem)
 }
 
 /*

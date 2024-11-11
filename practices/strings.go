@@ -33,5 +33,5 @@ func main() {
 
 	// Given that string index and slice expressions operate on bytes, not code points, so built-in len function returns the number of bytes in a string, not the number of characters.
 
-	fmt.Println(len("hello 😈")) // 10 (5 bytes for hello_ and 4 bytes for 😈)
+	fmt.Println(len("hello 😈")) // 10 (6 bytes for hello_ and 4 bytes for 😈)
 }
