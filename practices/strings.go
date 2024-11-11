@@ -23,15 +23,34 @@ func main() {
 	// However, not all code points are 1 byte long. Some code points are two, three, or four bytes long, e.g., emoji, Chinese characters, Japanese characters, etc.
 	// While a code point in UTF-8 can be anywhere from 1 to 4 bytes long, a code unit in UTF-8 is always 1 byte long.
 	// If we try to extract a single byte from a string that contains multi-byte code points, we will get only the first byte of the code point.
-
 	var s1 = "hello, 😈" // 😈 is a single code point, but it is represented by 4 bytes
 	var s2 = s1[5:7]    // got � because the slice expression extracted only the first byte of the code point
 	var s3 = s1[:5]     // got hello
-	var s4 = s1[6:]     // got 😈because the slice expression extracted the entire code point
-
+	var s4 = s1[6:]     // got 😈 because the slice expression extracted the entire code point
 	fmt.Printf("s1: %s\ns2: %s\ns3:%s\ns4: %s\n", s1, s2, s3, s4)
 
 	// Given that string index and slice expressions operate on bytes, not code points, so built-in len function returns the number of bytes in a string, not the number of characters.
-
 	fmt.Println(len("hello 😈")) // 10 (6 bytes for hello_ and 4 bytes for 😈)
+
+	// We also can convert a single run or byte to a string
+	var a rune = 'a'       // rune is an alias for int32 and represents a Unicode code point
+	fmt.Println(string(a)) // a
+	var b byte = 'b'
+	fmt.Println(string(b)) // b
+
+	// Do not try to make an int into a string by using string(42) or string(3.14159), because it will return the Unicode character with that code point.
+	var i int = 42
+	fmt.Println(string(i)) // *
+
+	// A string can be converted back and forth to a slice of bytes or a slice of runes
+	str := "Hello, 🌞"
+	bs := []byte(str) // convert string to []byte
+	fmt.Println(bs)   // [72 101 108 108 111 44 32 240 159 140 158]
+	rs := []rune(str) // convert string to []rune
+	fmt.Println(rs)   // [72 101 108 108 111 44 32 127774]
+	/*
+		- 240 159 140 158 is the UTF-8 encoding of the 🌞 emoji. When we convert the string to a slice of bytes, we get the UTF-8 encoding of the string. Each byte represents a single character.
+		- 127774 is the Unicode code point of the 🌞 emoji. When we convert the string to a slice of runes, we get the Unicode code points of the string. Each code point represents a single character.
+		- So if when we work with strings that contain multi-byte code points, we should use the slice of runes to get the correct code point.
+	*/
 }
