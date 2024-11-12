@@ -14,6 +14,9 @@ func main() {
 	s := "hello"
 	c := s[1]      // c is byte
 	fmt.Println(c) // 101 (ASCII code for 'e')
+	// when we use the index expression on a string, we get a byte at that position.
+	// and each byte is an 8-bit value that represents a single character in the ASCII character set.
+	// a byte is an alias for uint8, so it can hold values from 0 to 255.
 
 	// or we can extract a substring from a string using the slice expression
 	ss := s[1:3]    // ss is string
@@ -53,4 +56,5 @@ func main() {
 		- 127774 is the Unicode code point of the 🌞 emoji. When we convert the string to a slice of runes, we get the Unicode code points of the string. Each code point represents a single character.
 		- So if when we work with strings that contain multi-byte code points, we should use the slice of runes to get the correct code point.
 	*/
+
 }
