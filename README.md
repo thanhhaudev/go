@@ -47,7 +47,7 @@
 - [Panic and Recover Inside Goroutine](practices/panic_n_recover_goroutines.go)
 
 ### Design Patterns
-- [Worker](design_patterns/worker/worker.go)
+- [Worker](design-patterns/worker/worker.go)
 
 ## Contributing 🤝
 If you want to contribute to this repository, you can fork this repository and create a pull request. I will review your pull request as soon as possible.
