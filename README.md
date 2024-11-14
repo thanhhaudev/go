@@ -16,6 +16,9 @@
 - [Slice expression](practices/slices_slice_expression.go)
 - [copy() function](practices/slices_copy.go)
 
+### Maps
+- [Maps](practices/maps.go)
+
 ### Interfaces/Structs
 - [Pointer and Value Receivers](practices/interface_pointer_n_value_receiver.go)
 
